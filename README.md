@@ -33,30 +33,30 @@
 ### 10.谈谈你对css in js的理解？
 
 ## 基础
-### 闭包的作用和原理
+### 1.闭包的作用和原理
 - 什么是闭包
 - 闭包的应用
-### 前端模块化规范
+### 2.前端模块化规范
 - JavaScript 主要有哪几种模块化规范
 - AMD / CMD 有什么异同
 - ESM 是什么
 - 模块化解决了什么问题/痛点
-### ES5、ES6 如何实现继承
+### 3.ES5、ES6 如何实现继承
 - 关于 ES5 和 ES6 的继承问题
 - 原型链概念
-### New 操作符的原理
+### 4.New 操作符的原理
 - new 操作符做了什么
 - new 操作符的模拟实现
-### JavaScript 异步编程
+### 5.JavaScript 异步编程
 - JavaScript 异步编程方案有哪些
 - JavaScript 异步编程方案各有什么优缺点
-### TypeScript 中的 Interface 和 Type Alias
+### 6.TypeScript 中的 Interface 和 Type Alias
 - Interface 和 Type Alias 的作用
 - Interface 和 Type Alias 的相同点
 - Interface 和 Type Alias 的区别
-### 什么是 TypeScript 泛型
+### 7.什么是 TypeScript 泛型
 - TypeScript 泛型的作用是什么
-### 谈谈ES6新特性
+### 8.谈谈ES6新特性
 
 ## 浏览器
 ### 1.浏览器的跨域
@@ -90,47 +90,47 @@
 - cookie、Web Storage 以及 IndexedDB 区别
 
 ## 框架
-### React Hooks 实现原理
+### 1.React Hooks 实现原理
 - React Hooks 是什么
 - React Hooks 是怎么实现的
 - 使用 React Hooks 需要注意什么
-### 常见框架的 Diff 算法
+### 2.常见框架的 Diff 算法
 - 虚拟 DOM 是什么
 - 虚拟 DOM 的作用
 - 讲一下 Vue 的 Diff 算法
-### HOC、Render Props、Hooks各自的优缺点
+### 3.HOC、Render Props、Hooks各自的优缺点
 - 什么是 HOC / Render Props / Hooks
 - 为什么需要 HOC / Render Props / Hooks
 - 如何提高代码复用性
 - Hooks 的实现原理
 - Hooks 相比其他方案有什么优势
-### React Fiber 的作用和原理
+### 4.React Fiber 的作用和原理
 - Fiber 是什么
 - 谈谈你对 Fiber 的了解
 - Fiber 对 React 的使用带来了什么影响
-### React 事件机制原理
+### 5.React 事件机制原理
 - React 合成事件与原生 DOM 事件的区别
 - React 如何注册和触发事件
 - React 事件如何解决浏览器兼容问题
-### 谈谈 React 和 Vue 的区别
+### 6.谈谈 React 和 Vue 的区别
 - 相同之处
 - 不同之处
-### Vue 的 computed 和 watch 的区别
+### 7.Vue 的 computed 和 watch 的区别
 - computed 和 watch 的实现原理
 - computed 和 watch 的适用场景
-### Vue 的数据绑定机制
+### 8.Vue 的数据绑定机制
 - Vue 是如何实现数据劫持的
 - Vue 是如何实现双向绑定的
 - MVVM 是什么
 
 ## 网络
-### HTTP/2 和 HTTP/1.1 的对比
+### 1.HTTP/2 和 HTTP/1.1 的对比
 - 了解 HTTP/2 吗
 - HTTP/1.0、HTTP/1.1 和 HTTP/2 的区别
-### 前端安全
+### 2.前端安全
 - 如何防范 XSS / CSRF 攻击
 - 说说 HTTPS 中间人攻击，及其如何防范
-### HTTP 缓存机制
+### 3.HTTP 缓存机制
 - 了解浏览器的缓存机制吗
 - 谈谈 HTTP 缓存
 - 为什么要有缓存
@@ -152,16 +152,16 @@
 - 微前端的优缺点
 
 ## 编码
-### 实现一个符合 Promises/A+ 规范的 Promise
-### 实现节流防抖函数
-### 将列表还原为树状结构
-### 实现 apply/call/bind
+### 1.实现一个符合 Promises/A+ 规范的 Promise
+### 2.实现节流防抖函数
+### 3.将列表还原为树状结构
+### 4.实现 apply/call/bind
 
 ## 算法
-### 平衡二叉树
-### 反转链表
-### 二叉搜索树的第 k 大的节点
-### 找到数组中重复的数字
+### 1.平衡二叉树
+### 2.反转链表
+### 3.二叉搜索树的第 k 大的节点
+### 4.找到数组中重复的数字
 
 ## 综合
 ### 浏览器从输入网址到页面展示的过程
