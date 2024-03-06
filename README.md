@@ -88,7 +88,7 @@ transform: translate(-50%, -50%);
 ```css
 height: xxx;
 line-height: xxx;
-margin: auto;
+text-align: center;
 ```
 ### 4.CSS3的新特性？
 - 新的选择器
