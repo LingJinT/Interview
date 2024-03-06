@@ -58,10 +58,15 @@ src一般用作外部资源的地址，href一般是超链接的地址。
 
 ### 3.实现元素的水平垂直居中？
 #### 1）flex
+display: flex; justify-content: center; align-items: center;
 #### 2）grid
+display: grid; justify-content: center; align-items: center;
 #### 3）相对定位
+position: relative; display: inline-block; top: 50%; left: 50%; transform: translate(-50%, -50%);
 #### 4）绝对定位
+position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
 #### 5）line-height
+height: xxx; line-height: xxx; margin: auto;
 ### 4.CSS3的新特性？
 - 新的选择器
 - 圆角边距
