@@ -110,28 +110,59 @@ display:flex，两边固定宽度，中间flex：1
 
 ## 三、基础
 ### 1.闭包的作用和原理
-- 什么是闭包
-- 闭包的应用
+#### 1)什么是闭包
+内部能访问外部函数内部的作用域，即使外部函数已经执行完毕
+#### 2)闭包的应用
+- 模块化
+- 定时器
+- 监听器
+- 等等回调函数
 ### 2.前端模块化规范
-- JavaScript 主要有哪几种模块化规范
-- AMD / CMD 有什么异同
-- ESM 是什么
-- 模块化解决了什么问题/痛点
+#### 1)JavaScript 主要有哪几种模块化规范
+- commonjs：node中的模块化规范，因为其不支持异步加载所以在浏览器中不适用。
+- AMD：支持异步加载，推荐依赖前置，语法复杂，无法静态分析模块。
+- CMD：支持异步加载，推荐依赖就近，语法复杂，无法静态分析模块。
+- UMD：同时支持commonjs和AMD，代码量大。
+- ESM：支持静态分析模块，兼容性较差。
+#### 2)AMD / CMD 有什么异同
+- AMD: 依赖前置
+- CMD：依赖就近
+#### 4)模块化解决了什么问题/痛点
+代码复用、程序维护性、命名冲突等
 ### 3.ES5、ES6 如何实现继承
-- 关于 ES5 和 ES6 的继承问题
-- 原型链概念
+#### 1)原型链概念
+一个实例的__proto__指向其constructor.prototype，这就可以让这个实例访问到它构造函数上面的一些方法，以此类推，如果这个构造函数是另一个对象的实例，那么也相应地继承，直到Object.prototype.__proto__ === null
+#### 2)原型链继承
+```js
+todo
+```
+#### 3)构造函数继承
+```js
+todo
+```
+#### 4)组合继承
+```js
+todo
+```
+#### 5)寄生组合继承
+```js
+todo
+```
+#### 6)class继承
+```js
+todo
+```
 ### 4.New 操作符的原理
-- new 操作符做了什么
-- new 操作符的模拟实现
+#### 1)new 操作符做了什么
+#### 2)new 操作符的模拟实现
 ### 5.JavaScript 异步编程
-- JavaScript 异步编程方案有哪些
-- JavaScript 异步编程方案各有什么优缺点
+#### 1)JavaScript 异步编程方案有哪些
+#### 2)JavaScript 异步编程方案各有什么优缺点
 ### 6.TypeScript 中的 Interface 和 Type Alias
-- Interface 和 Type Alias 的作用
-- Interface 和 Type Alias 的相同点
-- Interface 和 Type Alias 的区别
-### 7.什么是 TypeScript 泛型
-- TypeScript 泛型的作用是什么
+#### 1)Interface 和 Type Alias 的作用
+#### 2)Interface 和 Type Alias 的相同点
+#### 3)Interface 和 Type Alias 的区别
+### 7.什么是 TypeScript 泛型,其作用是什么
 ### 8.谈谈ES6新特性
 ### 9.箭头函数和普通函数的区别
 ### 10.深浅拷贝
