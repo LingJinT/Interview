@@ -133,24 +133,80 @@ display:flex，两边固定宽度，中间flex：1
 #### 1)原型链概念
 一个实例的__proto__指向其constructor.prototype，这就可以让这个实例访问到它构造函数上面的一些方法，以此类推，如果这个构造函数是另一个对象的实例，那么也相应地继承，直到Object.prototype.__proto__ === null
 #### 2)原型链继承
+- 每个实例都共用一个对象
+- 无法传递构造函数的参数
 ```js
-todo
+function Child(name) {
+  this.name = name
+}
+function Parent(age) {
+  this.age = 16
+}
+Parent.prototype.say = function() { console.log('say') } 
+Child.prototype = new Parent()
+Child.prototype.constructor = Child
+const child = new Child('zhangsan')
+console.log(child.age)
 ```
 #### 3)构造函数继承
+- 实例不会共用一个对象
+- 可以传递构造函数的参数
+- 无法访问父亲的原型方法
 ```js
-todo
+function Parent(name) {
+  this.name = name
+}
+function Child(name) {
+  Parent.call(this, name)
+}
+Parent.prototype.say = function() {
+ console.log('say')
+}
+const child = new Child('zhangsan')
+console.log(child)
 ```
 #### 4)组合继承
+- 可以访问父亲的原型方法
+- Parent构造函数会被调用两次
 ```js
-todo
+function Parent(name) {
+  this.name = name
+}
+Parent.prototype.say = function() { console.log('say') }
+function Child(name) {
+  Parent.call(this, name)
+}
+Child.prototype = new Parent()
+Child.prototype.constructor = Child
+const child = new Child('zhangsan')
+console.log(child)
 ```
 #### 5)寄生组合继承
+- 父亲的构造函数只用调一次
+- 写法复杂
 ```js
-todo
+function inhertPrototype(Child, Parent) {
+  const prototype = Object.create(Parent.prototype)
+  Child.prototype = prototype
+  Child.prototype.constructor = Child
+}
+
+function Parent(name) {
+  this.name = name
+}
+Parent.prototype.say = function() { console.log('say') }
+function Child(age, name) {
+  Parent.call(this, name)
+  this.age = age
+}
+inhertPrototype(Child, Parent)
+const child = new Child(16, 'zhangsan')
+console.log(child)
 ```
 #### 6)class继承
+- 写法简单
 ```js
-todo
+class Child extends Parent
 ```
 ### 4.New 操作符的原理
 #### 1)new 操作符做了什么
