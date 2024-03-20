@@ -441,15 +441,18 @@ babel是代码编译器、可以将js代码转换成AST树，便于其他插件�
 
 ## 七、编码
 ### 1.实现一个符合 Promises/A+ 规范的 Promise
+```js
+todo
+```
 ### 2.实现节流防抖函数
 #### 1)节流
 ```js
-function throttle(func, timer) {
+function throttle(func, delay) {
   let last = 0
-  return (...args) => {
+  return function(...args) {
     const now = Date.now()
-    if(now - last > timer) {
-      func(...args)
+    if(now - last > delay) {
+      func.apply(this, args)
       last = now
     }
   }
@@ -457,19 +460,121 @@ function throttle(func, timer) {
 const doconsole = throttle(() => {
   console.log('===')
 }, 1000)
-setInterval(doconsole, 1000)
+setInterval(doconsole, 100)
 ```
 #### 2)防抖
 ```js
+function debounce(func, delay) {
+  let timer
+  return function(...args) {
+    clearTimeout(timer)
+     timer = setTimeout(() => {
+       func.apply(this, args)
+     }, delay)
+  }
+}
+function doSomething() {
+    console.log('Doing something...')
+}
+const debouncedFunction = debounce(doSomething, 1000)
+document.addEventListener('mousemove', debouncedFunction)
 ```
 ### 3.将列表还原为树状结构
+```js
+const list = [
+  { pid: null, id: 1, data: "1" },
+  { pid: 1, id: 2, data: "2-1" },
+  { pid: 1, id: 3, data: "2-2" },
+  { pid: 2, id: 4, data: "3-1" },
+  { pid: 3, id: 5, data: "3-2" },
+  { pid: 4, id: 6, data: "4-1" },
+]
+const map = new Map()
+list.forEach(item => {
+  item.children = []
+  map.set(item.id, item)
+})
+list.forEach(item => {
+  const parent = map.get(item.pid)
+  if(parent) {
+    parent.children.push(item)
+  }
+})
+const res = list.filter(item => item.pid === null)
+console.log(res)
+```
 ### 4.实现 apply/call/bind
+#### 1)call
+```js
+Function.prototype.myCall = function(context, ...args) {
+  context = context || window
+  const key = Symbol()
+  context[key] = this
+  const res = context[key](...args)
+  delete context[key]
+  return res
+}
+const obj = {
+    name: 'John'
+}
+function greet(greeting) {
+    return `${greeting}, ${this.name}!`
+}
+console.log(greet.myCall(obj, 'Hello'))
+```
+#### 2)apply
+```js
+Function.prototype.myApply = function(context, args) {
+  context = context || window
+  const key = Symbol()
+  context[key] = this
+  const res = context[key](...args)
+  delete context[key]
+  return res
+}
+const obj = {
+    name: 'John'
+}
+function greet(greeting) {
+    return `${greeting}, ${this.name}!`
+}
+console.log(greet.myApply(obj, ['Hello']))
+```
+#### 3)bind
+```js
+Function.prototype.myBind = function(context, ...args) {
+  const fn = this
+  return (...innerArgs) => {
+     return fn.apply(context, [...args, ...innerArgs])
+  }
+}
+const person = {
+  name: 'John',
+  greet: function (message, age) {
+    console.log(`${message}, ${this.name}!, my age is ${age}`)
+  }
+}
+const boundGreet = person.greet.myBind(person, 'Hello')
+boundGreet(16)
+```
 
 ## 八、算法
 ### 1.平衡二叉树
+```js
+todo
+```
 ### 2.反转链表
+```js
+todo
+```
 ### 3.二叉搜索树的第 k 大的节点
+```js
+todo
+```
 ### 4.找到数组中重复的数字
+```js
+todo
+```
 
 ## 九、综合
 ### 1.浏览器从输入网址到页面展示的过程
