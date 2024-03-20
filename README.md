@@ -217,7 +217,17 @@ class Child extends Parent
 - 如果构造函数返回的值为空则返回这个对象，否则返回该值
 #### 2)new 操作符的模拟实现
 ```js
-todo
+function myNew(constructor, ...args) {
+  const obj = Object.create(constructor.prototype)
+  const res = constructor.apply(obj, args)
+  return res instanceof Object ? res : obj
+}
+function People(name) {
+  this.name = name
+}
+People.prototype.say = function() { console.log(this.name) }
+const people = myNew(People, '张三')
+console.log(people)
 ```
 ### 5.JavaScript 异步编程
 #### 1)JavaScript 异步编程方案有哪些,各有什么优缺点？
@@ -314,9 +324,7 @@ js是单线程机制，所以分为了微任务和宏任务，一个宏任务执
 #### 1)React Hooks 是什么
 react 16.8引入的新特性，使函数组件也可以使用state
 #### 2)React Hooks 是怎么实现的
-```js
-todo
-```
+利用数组模拟存储状态、利用闭包、发布订阅模式。
 #### 3)使用 React Hooks 需要注意什么
 - 只在函数组件中使用
 - 在函数最顶层使用
