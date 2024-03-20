@@ -442,6 +442,26 @@ babel是代码编译器、可以将js代码转换成AST树，便于其他插件�
 ## 七、编码
 ### 1.实现一个符合 Promises/A+ 规范的 Promise
 ### 2.实现节流防抖函数
+#### 1)节流
+```js
+function throttle(func, timer) {
+  let last = 0
+  return (...args) => {
+    const now = Date.now()
+    if(now - last > timer) {
+      func(...args)
+      last = now
+    }
+  }
+}
+const doconsole = throttle(() => {
+  console.log('===')
+}, 1000)
+setInterval(doconsole, 1000)
+```
+#### 2)防抖
+```js
+```
 ### 3.将列表还原为树状结构
 ### 4.实现 apply/call/bind
 
