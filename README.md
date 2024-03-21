@@ -563,7 +563,7 @@ boundGreet(16)
 [LeetCode](https://leetcode.cn/problems/ping-heng-er-cha-shu-lcof/description/?envType=list&envId=a9fIYLNr)
 ### 2.反转链表
 ```js
-todo
+[LeetCode](https://leetcode.cn/problems/UHnkqh/description/)
 ```
 ### 3.二叉搜索树的第 k 大的节点
 ```js
