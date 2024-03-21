@@ -560,9 +560,7 @@ boundGreet(16)
 
 ## 八、算法
 ### 1.平衡二叉树
-```js
-todo
-```
+[LeetCode](https://leetcode.cn/problems/ping-heng-er-cha-shu-lcof/description/?envType=list&envId=a9fIYLNr)
 ### 2.反转链表
 ```js
 todo
