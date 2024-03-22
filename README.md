@@ -567,7 +567,7 @@ boundGreet(16)
 ```
 ### 3.二叉搜索树的第 k 大的节点
 ```js
-todo
+[LeetCode](https://leetcode.cn/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/submissions/515381149/)
 ```
 ### 4.找到数组中重复的数字
 ```js
