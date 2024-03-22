@@ -571,7 +571,7 @@ boundGreet(16)
 ```
 ### 4.找到数组中重复的数字
 ```js
-todo
+[LeetCode](https://leetcode.cn/problems/find-all-duplicates-in-an-array/submissions/515389971/)
 ```
 
 ## 九、综合
