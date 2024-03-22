@@ -562,17 +562,11 @@ boundGreet(16)
 ### 1.平衡二叉树
 [LeetCode](https://leetcode.cn/problems/ping-heng-er-cha-shu-lcof/description/?envType=list&envId=a9fIYLNr)
 ### 2.反转链表
-```js
-[LeetCode](https://leetcode.cn/problems/UHnkqh/description/)
-```
+[LeetCode](https://leetcode.cn/problems/UHnkqh/description)
 ### 3.二叉搜索树的第 k 大的节点
-```js
 [LeetCode](https://leetcode.cn/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/submissions/515381149/)
-```
 ### 4.找到数组中重复的数字
-```js
 [LeetCode](https://leetcode.cn/problems/find-all-duplicates-in-an-array/submissions/515389971/)
-```
 
 ## 九、综合
 ### 1.浏览器从输入网址到页面展示的过程
